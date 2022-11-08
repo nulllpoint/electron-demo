@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* user-select: none; */
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333 !important;
+    color: white !important;
+  }
+
+  .head {
+    background-color: rgb(60, 58, 58);
+  }
+
+  .foot {
+    background-color: rgb(60, 58, 58);
+  }
+
+  .panel-left {
+    background-color: rgb(41, 40, 40);
+  }
+
+  /* 拖拽区域 */
+  .drag-area {
+    background-color: rgba(128, 128, 128, 0.801);
+  }
+
+  /* layui table data */
+  .layui-table td,
+  .layui-table th,
+  .layui-table-col-set,
+  .layui-table-fixed-r,
+  .layui-table-grid-down,
+  .layui-table-header,
+  .layui-table-page,
+  .layui-table-tips-main,
+  .layui-table-tool,
+  .layui-table-total,
+  .layui-table-view,
+  .layui-table-init,
+  .layui-table-body,
+  .layui-table-main,
+  .layui-box,
+  .layui-laypage,
+  .layui-laypage-default,
+  .layui-table,
+  .layui-table {
+    background-color: #333 !important;
+    color: white !important;
+    border-color: rgb(60, 58, 58) !important;
+  }
+
+  .layui-laypage-curr,
+  .layui-laypage-em {
+    background-color: rgb(77, 77, 77) !important;
+  }
+
+  .layui-laypage-curr,
+  .layui-laypage-count,
+  .layui-laypage-skip,
+  .layui-laypage a {
+    color: white !important;
+  }
+
+
+
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #ddd !important;
+    color: black !important;
+  }
+
+  .head,
+  /* .panel, */
+  .panel-left,
+  .panel-right,
+  .foot {
+    margin: 0 -1px -1px 0;
+    ;
+    border: 1px solid rgb(211, 209, 209);
+  }
+
+  .head {
+    background-color: white;
+  }
+
+  .panel-left {
+    background-color: rgb(195, 195, 195);
+  }
+
+  /* 拖拽区域 */
+  .drag-area {
+    background-color: rgba(128, 128, 128, 0.9);
+  }
+
+  .foot {
+    background-color: white;
+  }
+
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  /* position: absolute; */
+  /* top: 0px; */
+  width: 100%;
+  height: 28px;
+  /* background-color: rgb(60, 58, 58); */
+  user-select: none
+}
+
+.panel {
+  /* background-color: blue; */
+  /* position: absolute; */
+  width: 100%;
+  top: 28px;
+  bottom: 20px;
+  flex: 1;
+  display: flex;
+}
+
+.panel-left {
+  width: 150px;
+  height: 100%;
+}
+
+.panel-right {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+/* 拖拽区域 */
+.drag-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 999;
+  text-align: center;
+}
+.drag-area-icon{
+  pointer-events: none;
+  position: relative;
+  top:40%;
+}
+
+.operate-area {
+  /* background-color: red; */
+  height: 35px;
+}
+
+.excel-data {
+  overflow: scroll;
+  /* white-space: nowrap; */
+  /* word-wrap:break-word;  */
+  /* word-break:break-all;  */
+}
+
+.excel-data-table {
+  overflow: scroll;
+}
+
+
+.foot {
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  /* position: absolute; */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+  <style>
+    .drag-test[over]{
+        outline: 4px solid slateblue;
+        }
+  </style>
+</head>
+ 
+<body>
+    <div class="drag-test" style="background-color: red;" allowdrop>
+        drag-test
+    </div>
+</body>
+
+<script>
+    document.querySelector('.drag-test').addEventListener('dragover', (e)=>{
+        e.preventDefault()
+        e.stopPropagation()
+        // console.log(e)
+    })
+
+    document.querySelector('.drag-test').addEventListener('drop', (e)=>{
+        e.preventDefault()
+        e.stopPropagation()
+        console.log(e)
+    })
+</script>
+ 
+</html>

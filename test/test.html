@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            position: relative;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: red;
+            /* opacity: 0.8; */
+        }
+
+        .box2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: blue;
+            display: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+<script>
+    const box1dom = document.querySelector('.box1')
+    const box2dom = document.querySelector('.box2')
+    box1dom.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        // console.log(e)
+        // console.log(this.)
+        // box1dom.style.outline="4px solid slateblue"
+        // box2dom.style.zIndex=999
+        // box2dom.style.display='block'
+        box2dom.style.display='block'
+    })
+
+    box2dom.addEventListener('dragleave', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        // console.log(e)
+        // console.log(this.)
+        // box1dom.style.outline=""
+        box2dom.style.display='none'
+        // box2dom.style.display=none
+    })
+
+    box2dom.addEventListener('drop', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        // box2dom.style.display='none'
+        // box2dom.style.zIndex=-1
+        box2dom.style.display=none
+        // document.querySelector('.box2').style.display='block'
+    })
+</script>
+
+</html>

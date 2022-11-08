@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';"> -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+  <meta http-equiv="X-Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+
+  <!-- <title>Hello World!</title> -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="base-page/base-title.css" />
+  <link rel="stylesheet" href="./layui/css/layui.css" />
+  <script src="./layui/layui.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="head">
+      <script src="base-page/base-title.js"></script>
+    </div>
+
+    <div class="panel">
+      <!-- <div class="panel-left"> -->
+        <!-- <button class="excel-read">excel read</button> -->
+      <!-- </div> -->
+      <div class="panel-right">
+        <div class="drag-area">
+          <i allowdrag class="drag-area-icon layui-icon layui-icon-add-circle-fine" style="font-size: 100px; color: rgb(65, 64, 64); "></i>
+        </div>
+        <!-- <div class="operate-area"> -->
+          <!-- <button type="button" class="layui-btn layui-btn-primary layui-btn-xs" style="color: white;" >按json导出excel</button> -->
+        <!-- </div> -->
+        <!-- <div class="excel-data"> -->
+          <!-- <table class="excel-data-table" lay-filter="test"></table> -->
+        <!-- </div> -->
+
+        <table class="layui-hide" id="excel-table" lay-filter="excel-table"></table>
+        <script type="text/html" id="toolbarDemo">
+          <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm" lay-event="export">导出</button>
+          </div>
+        </script>
+
+      </div>
+    </div>
+
+    <div class="foot">
+
+    </div>
+
+  </div>
+</body>
+
+<script src="./renderer.js">
+</script>
+
+<script>
+  
+</script>
+
+
+</html>

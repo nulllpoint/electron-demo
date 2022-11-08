@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../src/layui/css/layui.css" />
+    <script src="../src/layui/layui.js"></script>
+</head>
+
+<body>
+    <button id="export">export</button>
+</body>
+
+<script>
+    var excel_table = layui.table;
+    document.getElementById('export').addEventListener('click', () => {
+        console.log("asdfasfsdf")
+        excel_table.exportFile([1], [
+            [1]
+        ], {
+            type: 'csv', // 导出格式
+            title: '导出文件'
+        });
+    })
+</script>
+
+</html>
